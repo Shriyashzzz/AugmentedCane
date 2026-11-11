@@ -1,6 +1,18 @@
 # Lidar Cane (GDG on Campus, College of San Mateo)
 
-Our club project: a low-cost lidar cane for visually impaired navigation, based on Stanford's open-source Augmented Cane.
+Our club project: a low-cost lidar cane that warns visually impaired users about obstacles in front of them, based on Stanford's open-source Augmented Cane.
+
+## Scope
+
+The cane does one job: tell the user when something is in front of them, by vibrating in the handle (stronger or faster as the obstacle gets closer).
+
+We are **not** building:
+
+- GPS or route navigation
+- The motorized wheel at the cane tip (Stanford uses it to steer the user; we use vibration instead and keep a normal white cane tip)
+- Camera or object recognition
+
+Final design: white cane + distance sensor + small board (Pi Zero 2 W or ESP32) + vibration motor + USB power bank.
 
 Right now we are at the idea stage. The first goal is simple: a Raspberry Pi reads a lidar sensor and prints the distance, then we add feedback (vibration or sound) on top of that.
 
@@ -17,7 +29,7 @@ Right now we are at the idea stage. The first goal is simple: a Raspberry Pi rea
 - Cane housing 3D models: `cane_hull.stl` / `cane_hull.stp`
 - Stanford's code: `obstacle_avoidance.py`, `gps_navigation.py`, `hallway_virtual_shorelining.py`, `haptic_test.py`, `cane_functions.py`
 
-Their code is written for an RPLidar A1 and a motorized wheel, so we use it as a reference and adapt ideas from it. It won't run on our hardware as is.
+Their code is written for an RPLidar A1 and a motorized wheel, so we use it as a reference and adapt ideas from it. It won't run on our hardware as is. Only the "read the lidar and decide if something is close" part of `obstacle_avoidance.py` is relevant to us; `gps_navigation.py`, `hallway_virtual_shorelining.py` and the wheel steering code are out of scope.
 
 ## Credit
 

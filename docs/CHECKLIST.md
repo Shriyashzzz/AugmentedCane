@@ -7,6 +7,7 @@ One thing I'd reccomend for the project, is to get each piece working on its own
 ## Phase 0: Setup and decisions
 
 - [ ] Everyone reads Stanford's `cane_assembly.pdf` and the [bill of materials](BILL_OF_MATERIALS.md) in the README
+- [x] Decide scope: obstacle detection only. No GPS/navigation, no motorized wheel at the tip (normal white cane tip, vibration in the handle instead)
 - [ ] Agree on the stage 1 goal: cane vibrates harder as an obstacle gets closer. Nothing else yet
 - [ ] Decide feedback type: vibration, speaker, or both (leaning vibration, since users need their hearing for traffic and echoes)
 - [ ] Decide the board: Pi Zero 2 W, or ESP32
@@ -102,9 +103,10 @@ Safety: this is an add-on to a white cane, not a replacement. Nobody should rely
 - [ ] Fall detection with SOS text (IMU + phone)
 - [ ] Find my cane (beeps when called from the phone)
 - [ ] Companion web app over Web Bluetooth: settings, battery level
-- [ ] "What's in front of me?" button (needs Pi 5 + camera)
-- [ ] GPS navigation
-- [ ] Upgrade to a scanning lidar like Stanford's RPLidar A1
+- [ ] Left/right direction: a vibration motor on each side of the handle, buzz the side the obstacle is on (needs 2 to 3 angled sensors or a scanning lidar)
+- [ ] Upgrade to a scanning lidar like Stanford's RPLidar A1 for a wider field of view
+
+Out of scope (we decided not to build these): GPS navigation, the motorized steering wheel at the tip, camera / "what's in front of me?" button.
 
 ## Phase 9: Document and show
 

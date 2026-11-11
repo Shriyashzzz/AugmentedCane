@@ -60,11 +60,15 @@ Almost half the budget is sensing, and the RPLidar alone is about a quarter of t
 
 ## How this compares to our plan
 
-| Stanford                              | Our stage 1                             | Why                                             |
-| ------------------------------------- | --------------------------------------- | ----------------------------------------------- |
-| RPLidar A1, $99.99, scans 360 degrees | TF-Luna, about $25 to $30, single point | We only need "something is ahead" at first      |
-| Raspberry Pi 4B 4GB                   | Pi Zero 2 W or ESP32                    | Reading one sensor doesn't need a full Pi       |
-| Motorized omniwheel steering, $61     | Vibration motors in the handle          | Much simpler to build and wire                  |
-| Ear buds for audio                    | Vibration first, audio later            | Users need their hearing for traffic and echoes |
-| Camera, GPS, IMU                      | IMU only, camera and GPS in stage 2     | Add one thing at a time                         |
-| LiPo plus separate battery            | USB power bank                          | Safer and easier for a first build              |
+Our cane only detects obstacles ahead. We are not doing GPS navigation, steering, or object recognition, so the GPS, camera and the whole steering group are dropped (about $150 of the list above).
+
+| Stanford                              | Our plan                                      | Why                                                          |
+| ------------------------------------- | --------------------------------------------- | ------------------------------------------------------------ |
+| RPLidar A1, $99.99, scans 360 degrees | TF-Luna, about $25 to $30, single point       | We only need "something is ahead" at first                   |
+| Raspberry Pi 4B 4GB                   | Pi Zero 2 W or ESP32                          | Reading one sensor doesn't need a full Pi                    |
+| Motorized omniwheel steering, $61     | Dropped. Normal cane tip, vibration in handle | The wheel only exists to steer the user; we just warn them   |
+| Ear buds for audio                    | Vibration first, audio later                  | Users need their hearing for traffic and echoes              |
+| GPS + antenna, $54.90                 | Dropped                                       | No navigation, obstacle detection only                       |
+| Camera + cable, $32.90                | Dropped                                       | No object recognition                                        |
+| IMU                                   | IMU (MPU6050 or BNO055), stage 2              | Cane tilt to filter false alerts, fall detection             |
+| LiPo plus separate battery            | USB power bank                                | Safer and easier for a first build                           |
