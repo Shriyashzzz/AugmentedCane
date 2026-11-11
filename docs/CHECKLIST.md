@@ -10,14 +10,14 @@ One thing I'd reccomend for the project, is to get each piece working on its own
 - [x] Decide scope: obstacle detection only. No GPS/navigation, no motorized wheel at the tip (normal white cane tip, vibration in the handle instead)
 - [ ] Agree on the stage 1 goal: cane vibrates harder as an obstacle gets closer. Nothing else yet
 - [ ] Decide feedback type: vibration, speaker, or both (leaning vibration, since users need their hearing for traffic and echoes)
-- [ ] Decide the board: Pi Zero 2 W, or ESP32
+- [x] Decide the board: Raspberry Pi 4B (4 GB). Pi Zero 2 W or ESP32 are cheaper backups
 - [ ] Assign roles: hardware and wiring / CAD (Onshape) / sensor code / companion app
 - [ ] Confirm club budget
 
-## Phase 1: First order (about $55 to $70)
+## Phase 1: First order (about $100 to $110, see [our parts list](BILL_OF_MATERIALS.md#our-parts-list))
 
 - [ ] TF-Luna lidar, _This is a single-point lidar we chose (one dot straight ahead), not a 2D scanner like Stanford's RPLidar A1, we should choose 2D scanner imo, but for testing it's cheap and it's fine for prototyping_
-- [ ] Raspberry Pi Zero 2 W (with headers) or the board we picked
+- [ ] Raspberry Pi 4B (4 GB)
 - [ ] microSD card, 16 GB or bigger
 - [ ] 2 coin vibration motors
 - [ ] Motor driver board (or a transistor + diode if someone knows how to wire that)

@@ -12,7 +12,32 @@ This is the parts list from Stanford's open-source Augmented Cane, copied out of
 
 Quick heads up for Michael: these prices are from around January 2021. Raspberry Pi boards in particular cost a lot more now, and some of these exact products may be discontinued, so we may have to look for alternatives.
 
-## Full parts list
+## Our parts list
+
+What we actually need for an obstacle-detection-only cane (no GPS, no wheel, no camera). Item numbers match Stanford's list below. Prices are Stanford's 2021 prices except our lidar.
+
+| #   | Part                                          | Cost        |
+| --- | --------------------------------------------- | ----------- |
+| 1   | Raspberry Pi 4B (4 GB)                        | $55.00      |
+| 2   | Our lidar (TF-Luna), replaces the RPLidar A1  | $24.99      |
+| 5   | NXP IMU                                       | $14.95      |
+| 8   | Pi Cobbler Breakout                           | $6.95       |
+| 9   | Protohat                                      | $4.95       |
+| 11  | Micro SD Card                                 | $6.90       |
+| 14  | USB cable                                     | $2.95       |
+| 15  | Rechargeable batteries (power the Pi)         | $12.50      |
+| 18  | Pi Case                                       | $18.99      |
+| 19  | White Cane (might 3D print)                   | $17.00      |
+|     | **Total**                                     | **$165.18** |
+
+The IMU (#5) is optional for the first build. Without it the total is $150.23.
+
+Still to add (not on Stanford's list, since they used the wheel for feedback):
+
+- 1 or 2 coin vibration motors
+- Motor driver board, or a transistor + diode, to run the motor from the Pi
+
+## Stanford's full parts list
 
 The "What it's for" column is our own note, not from the spreadsheet.
 
@@ -64,11 +89,12 @@ Our cane only detects obstacles ahead. We are not doing GPS navigation, steering
 
 | Stanford                              | Our plan                                      | Why                                                          |
 | ------------------------------------- | --------------------------------------------- | ------------------------------------------------------------ |
-| RPLidar A1, $99.99, scans 360 degrees | TF-Luna, about $25 to $30, single point       | We only need "something is ahead" at first                   |
-| Raspberry Pi 4B 4GB                   | Pi Zero 2 W or ESP32                          | Reading one sensor doesn't need a full Pi                    |
+| RPLidar A1, $99.99, scans 360 degrees | TF-Luna, $24.99, single point                 | We only need "something is ahead" at first                   |
+| Raspberry Pi 4B 4GB                   | Same, Raspberry Pi 4B 4GB                     | Pi Zero 2 W or ESP32 would be cheaper if budget is tight     |
+| White cane, $17                       | White cane, might 3D print                    | Could save money and fit our housing better                  |
 | Motorized omniwheel steering, $61     | Dropped. Normal cane tip, vibration in handle | The wheel only exists to steer the user; we just warn them   |
 | Ear buds for audio                    | Vibration first, audio later                  | Users need their hearing for traffic and echoes              |
 | GPS + antenna, $54.90                 | Dropped                                       | No navigation, obstacle detection only                       |
 | Camera + cable, $32.90                | Dropped                                       | No object recognition                                        |
 | IMU                                   | IMU (MPU6050 or BNO055), stage 2              | Cane tilt to filter false alerts, fall detection             |
-| LiPo plus separate battery            | USB power bank                                | Safer and easier for a first build                           |
+| LiPo plus separate battery            | Rechargeable batteries for the Pi only        | No motor to power, so no LiPo or LiPo charger                |

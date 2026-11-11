@@ -12,13 +12,13 @@ We are **not** building:
 - The motorized wheel at the cane tip (Stanford uses it to steer the user; we use vibration instead and keep a normal white cane tip)
 - Camera or object recognition
 
-Final design: white cane + distance sensor + small board (Pi Zero 2 W or ESP32) + vibration motor + USB power bank.
+Final design: white cane + TF-Luna lidar + Raspberry Pi 4B + vibration motor + rechargeable batteries. About $165 in parts (see [our parts list](docs/BILL_OF_MATERIALS.md#our-parts-list)).
 
 Right now we are at the idea stage. The first goal is simple: a Raspberry Pi reads a lidar sensor and prints the distance, then we add feedback (vibration or sound) on top of that.
 
 ## Docs
 
-- [Bill of Materials](docs/BILL_OF_MATERIALS.md): Stanford's original parts list with prices, and how our plan differs
+- [Bill of Materials](docs/BILL_OF_MATERIALS.md): our parts list, Stanford's original parts list with prices, and how our plan differs
 - [Build Checklist](docs/CHECKLIST.md): step by step plan, tick things off as we go
 
 ## Reference
